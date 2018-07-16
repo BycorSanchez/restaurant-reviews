@@ -70,10 +70,6 @@ ul{
   padding: 12px 10px 12px 18px;
 }
 
-#breadcrumb {
-  list-style: none;
-}
-
 /* Display list items side by side */
 #breadcrumb li {
     display: inline;
@@ -140,7 +136,6 @@ ul{
 
 #restaurants-list {
   background-color: #f3f3f3;
-  list-style: outside none none;
   padding: 20px 15px 35px;
   text-align: center;
 }
@@ -186,11 +181,11 @@ ul{
   text-transform: uppercase;
 }
 
-/* ====================== Restaurant Details ====================== */
+/* ====== RESTAURANT DETAILS ====== */
 
 .inside .restaurant-name {
   font-size: 1.75em;
-  margin: 15px 5px 30px;
+  margin: 0 5px 30px;
 }
 
 #restaurant-address {
@@ -234,7 +229,7 @@ ul{
   border: 2px solid #f3f3f3;
   list-style-type: none;
   padding: 14px 20px;
-  margin: 20px 0;
+  margin: 14px 0;
 }
 
 #reviews-list li p {
