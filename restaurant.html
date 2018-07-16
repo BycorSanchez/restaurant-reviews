@@ -11,35 +11,35 @@
   <title>Restaurant Info</title>
 </head>
 
-<body class="inside">
-  <header class="app-header">
+<body>
+  <header class="app-header grid-row">
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <nav>
-      <ul id="breadcrumb" >
+  <nav class="breadcrumb-container">
+      <ul id="breadcrumb">
           <li><a href="/">Home</a></li>
       </ul>
   </nav>
 
-  <main>
+  <main class="inside grid-row">
 
     <section id="map-container">
       <div id="map"></div>
     </section>
 
-    <section id="restaurant-container">
-      <h2 id="restaurant-name"></h2>
+    <section id="restaurant-container" class="grid-column restaurant-section">
+      <h2 id="restaurant-name" class="restaurant-name"></h2>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
     </section>
 
-    <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+    <section id="reviews-container" class="restaurant-section">
+      <ul id="reviews-list" class="grid-row"></ul>
     </section>
 
   </main>
