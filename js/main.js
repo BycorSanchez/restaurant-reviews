@@ -3,10 +3,22 @@ var newMap;
 var markers = [];
 
 /**
+ *  Register Service worker if browser supports it
+ */
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('/sw.js', { scope: './' })
+    .then(function () {
+      console.log('Service worker registration succeeded');
+    }).catch(function (error) {
+      console.log(`Service worker registration failed: ${error}`);
+    });
+}
+
+/**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  initMap(); // added 
+  initMap();
   fetchNeighborhoods();
   fetchCuisines();
 });
@@ -16,7 +28,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
  */
 fetchNeighborhoods = () => {
   DBHelper.fetchNeighborhoods((error, neighborhoods) => {
-    if (error) { // Got an error
+    if (error) {
       console.error(error);
     } else {
       self.neighborhoods = neighborhoods;
@@ -25,9 +37,7 @@ fetchNeighborhoods = () => {
   });
 }
 
-/**
- * Set neighborhoods HTML.
- */
+// Set neighborhoods HTML.
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
   neighborhoods.forEach(neighborhood => {
@@ -43,7 +53,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
  */
 fetchCuisines = () => {
   DBHelper.fetchCuisines((error, cuisines) => {
-    if (error) { // Got an error!
+    if (error) {
       console.error(error);
     } else {
       self.cuisines = cuisines;
@@ -86,6 +96,8 @@ initMap = () => {
 
   updateRestaurants();
 }
+
+
 /* window.initMap = () => {
   let loc = {
     lat: 40.722216,
@@ -98,6 +110,7 @@ initMap = () => {
   });
   updateRestaurants();
 } */
+
 
 /**
  * Update page and map for current restaurants.
@@ -113,7 +126,7 @@ updateRestaurants = () => {
   const neighborhood = nSelect[nIndex].value;
 
   DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, (error, restaurants) => {
-    if (error) { // Got an error!
+    if (error) {
       console.error(error);
     } else {
       resetRestaurants(restaurants);
@@ -179,9 +192,9 @@ createRestaurantHTML = (restaurant) => {
   more.classList = 'restaurant-details button-style';
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  li.append(more);
 
-  return li
+  return li;
 }
 
 /**
