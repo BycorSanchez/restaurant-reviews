@@ -12,7 +12,7 @@ body {
 	line-height: 1.5;
 }
 
-body, h1{
+body, h1, h2, h3, p{
   margin: 0;
 }
 
@@ -70,7 +70,6 @@ ul{
   padding: 12px 10px 12px 18px;
 }
 
-/* Display list items side by side */
 #breadcrumb li {
     display: inline;
 }
@@ -82,18 +81,17 @@ ul{
     content: "/\00a0";
 }
 
-/* Add a color to all links inside the list */
 #breadcrumb li a {
     color: #0275d8;
     text-decoration: none;
 }
 
-/* Add a color on mouse-over */
 #breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
 }
-/* ====================== Map ====================== */
+
+/* ====== MAP ====== */
 
 #map-container{
   width: 100%;
@@ -151,10 +149,6 @@ ul{
   max-width: 400px;
   padding: 25px 30px;
   text-align: left;
-}
-
-.restaurant-item p {
-  margin: 0;
 }
 
 .restaurant-item img {
