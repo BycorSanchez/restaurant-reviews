@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/BycorSanchez/restaurant-reviews#readme",
   "devDependencies": {
-    "gulp-autoprefixer": "^5.0.0"
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-image-resize": "^0.13.0"
   }
 }
