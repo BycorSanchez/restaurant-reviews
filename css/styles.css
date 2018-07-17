@@ -237,11 +237,14 @@ ul{
 }
 
 #restaurant-hours {
+  margin-top: 15px;
   max-width: 500px;
+  border-collapse: collapse;
 }
 
-#restaurant-hours * {
+#restaurant-hours tr {
   color: #666;
+  border-bottom: 1px solid #d6d6d6;
 }
 
 /* ===== GENERICS ===== */
@@ -267,7 +270,7 @@ ul{
 
 @media screen and (min-width: 800px){
   .inside #map-container{
-    width: 45%;
+    width: 55%;
     flex: 1 1 auto;
     order: 1;
   }
@@ -277,8 +280,9 @@ ul{
   }
 
   #restaurant-container{
-    width: 55%;
+    width: 45%;
     order: 0;
+    align-items: center;
   }
 
   #reviews-container{
