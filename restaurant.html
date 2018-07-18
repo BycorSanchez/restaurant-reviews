@@ -14,12 +14,12 @@
 
 <body>
   <header class="app-header grid-row">
-    <nav>
+    <nav role="navigation" aria-labelledby="site-title">
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <nav class="breadcrumb-container">
+  <nav class="breadcrumb-container" role="navigation" aria-labelledby="breadcrumb">
       <ul id="breadcrumb">
           <li><a href="/">Home</a></li>
       </ul>
@@ -28,7 +28,7 @@
   <main class="inside grid-row">
 
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" role="application"></div>
     </section>
 
     <section id="restaurant-container" class="grid-column restaurant-section">
