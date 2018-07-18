@@ -1,32 +1,38 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews Project
 
-## Project Overview: Stage 1
+This is the sixth required project on the [Udacity Front End Nanodegree](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001).
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+The goal of this project was to convert a static webpage into a mobile-ready web application. At first the website was not prepared to work in mobile devices (lists were too long, information shown was too big for small screens, etc). 
 
-### Specification
+The development has been focused on converting the design to be responsive on different sized displays. In order to do so a *mobile-first* approach has been followed, using flexbox grids to accomplish a flexible design no matter the screen size.
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+Afterwards, I focused on improving user offline experience, by using a basic service worker with cache, and implementing standard accessibility features.
 
-### What do I do from here?
+## What is it
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+Restaurant reviews is a simple web application that shows a list of available restaurants in a area. All restaurants are geolocated within a map and they can be filter by neighborhood and/or cuisine.
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+When entering in a restaurant ("View details" button) additional information is shown, such as: time schedule and customer reviews.
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+## How to run
 
-## Leaflet.js and Mapbox:
+This project requires [Python](https://www.python.org/) to be installed on your machine.
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+1. Download [⬇](https://github.com/BycorSanchez/restaurant-reviews/archive/master.zip) or clone this repository.
+2. Launch server. In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000`. For Python 3.x, you can use `python3 -m http.server 8000`.
+3. Visit `http://localhost:8000`.
 
-### Note about ES6
+## Technologies used
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+* ES6 JavaScript
+* [Leaflet.js](https://leafletjs.com/)
+* [Mapbox](https://www.mapbox.com/)
+* Flexbox
+* Service worker
+* Cache API
+* [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer) (add CSS vendor prefixes)
+* [gulp-image-resize](https://github.com/scalableminds/gulp-image-resize) (reduce images size)
+ 
+### Notes
 
-
-
+Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code.
