@@ -34,7 +34,8 @@ This project requires [Python](https://www.python.org/) to be installed on your 
 * [gulp-image-resize](https://github.com/scalableminds/gulp-image-resize) (reduce images size)
  
 ### Notes
-
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code.
+
+----
 
 ![Restaurant Reviews App Preview](img/preview.jpg)
