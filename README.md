@@ -2,15 +2,15 @@
 
 This is the sixth required project on the [Udacity Front End Nanodegree](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001).
 
-The goal of this project was to convert a static webpage into a mobile-ready web application. At first the website was not prepared to work in mobile devices (lists were too long, information shown was too big for small screens, etc). 
+The goal of this project was to convert a static webpage into a mobile-ready web application. At first the website was not prepared to work on mobile devices (lists were too long, information shown was too big for small screens, etc.). 
 
-The development has been focused on converting the design to be responsive on different sized displays. In order to do so a *mobile-first* approach has been followed, using flexbox grids to accomplish a flexible design no matter the screen size.
+The development has been focused on converting the design to be responsive on different sized displays. In order to do, so a **mobile-first** approach has been followed. Flexbox grids are used to accomplish a flexible and adaptive design no matter the screen size.
 
 Afterwards, I focused on improving user offline experience, by using a basic service worker with cache, and implementing standard accessibility features.
 
 ## What is it
 
-Restaurant reviews is a simple web application that shows a list of available restaurants in a area. All restaurants are geolocated within a map and they can be filter by neighborhood and/or cuisine.
+Restaurant reviews is a simple web application that shows a list of available restaurants in an area. All restaurants are geolocated within a map and they can be filtered by neighborhood and/or cuisine.
 
 When entering in a restaurant ("View details" button) additional information is shown, such as: time schedule and customer reviews.
 
